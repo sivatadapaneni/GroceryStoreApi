@@ -20,7 +20,7 @@ namespace GroceryStoreApi.UnitTests
         public CustomerRepositoryTests()
         {
             _customers = new List<Customer>();
-            _customers.Add(new Customer() { Id = 1, FirstName = "David" });
+            _customers.Add(new Customer() { Id = 1, FirstName = "David", LastName = "Test",Gender="Male" });
 
             _mock = new Mock<ICustomerContext>();
         }
@@ -106,6 +106,16 @@ namespace GroceryStoreApi.UnitTests
         }
 
         [Fact]
+        public void AddCustomer_ShouldReturnException_ForBadInput()
+        {
+            Customer customer = new Customer() { Id = 2, FirstName = "Test", LastName = "Test", Gender = "" };
+
+            ICustomerRepository repo = new CustomerRepository(_mock.Object);
+            repo.Invoking(x => x.AddCustomer(customer)).Should().Throw<Exception>();
+
+        }
+
+        [Fact]
         public void AddCustomer_ShouldReturnException_WhenCustomerContext_throwsException()
         {
             Customer customer = new Customer() { Id = 2, FirstName = "Test", LastName = "Test", Gender = "Male" };
@@ -136,6 +146,17 @@ namespace GroceryStoreApi.UnitTests
         public void UpdateCustomer_ShouldReturnException_WhenCustomerContext_throwsException()
         {
             Customer customer = new Customer() { Id = 2, FirstName = "Test", LastName = "Test", Gender = "Male" };
+
+            ICustomerRepository repo = new CustomerRepository(_mock.Object);
+            repo.Invoking(x => x.UpdateCustomer(customer)).Should().Throw<Exception>();
+
+        }
+
+
+        [Fact]
+        public void UpdateCustomer_ShouldReturnException_ForBadInput()
+        {
+            Customer customer = new Customer() { Id = 2, FirstName = "Test", LastName = "Test", Gender = "" };
 
             ICustomerRepository repo = new CustomerRepository(_mock.Object);
             repo.Invoking(x => x.UpdateCustomer(customer)).Should().Throw<Exception>();
