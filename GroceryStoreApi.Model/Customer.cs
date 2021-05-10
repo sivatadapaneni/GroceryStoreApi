@@ -1,4 +1,4 @@
-﻿namespace GroceryStoreApi.Model
+namespace GroceryStoreApi.Model
 {
     /// <summary>
     /// Customer
@@ -25,6 +25,9 @@
         public bool IsValid()
         {
             //TO DO: implement validations for Customer entity
+            //For now only adding First name, last name and Gender required
+            if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Gender))
+                return false;
             return true;
         }
 
