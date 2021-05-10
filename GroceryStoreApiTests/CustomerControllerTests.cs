@@ -66,7 +66,7 @@ namespace GroceryStoreApi.IntegrationTests
 
         [Theory]
         [InlineData("Test","Test","Male")]
-        public async Task Test_AddCustomer(string firstName, string lastName, string gender)
+        public async Task Test_AddCustomer_SucessfulInsert(string firstName, string lastName, string gender)
         {
             // Get customer by id
             var customer = new Customer() { Id =0, FirstName = firstName, LastName = lastName, Gender = gender };
@@ -80,10 +80,21 @@ namespace GroceryStoreApi.IntegrationTests
             actual.Gender.Should().BeEquivalentTo(gender);
 
         }
+        [Theory]
+        [InlineData("Test", "Test", "")]
+        [InlineData("", "Test", "Male")]
+        public async Task Test_AddCustomer_BadRequest(string firstName, string lastName, string gender)
+        {
+            // Get customer by id
+            var customer = new Customer() { Id = 0, FirstName = firstName, LastName = lastName, Gender = gender };
+            var response = await Client.PostAsync("/customer", new StringContent(JsonConvert.SerializeObject(customer), Encoding.UTF8, "application/json"));
+            response.StatusCode.Should().BeEquivalentTo(400);
+
+        }
 
         [Theory]
         [InlineData(2,"Test", "Test", "Male")]
-        public async Task Test_UpdateCustomer(int id, string firstName, string lastName, string gender)
+        public async Task Test_UpdateCustomer_SuccesfulUpdate(int id, string firstName, string lastName, string gender)
         {
             // Get customer by id
             var customer = new Customer() { Id = id, FirstName = firstName, LastName = lastName, Gender = gender };
@@ -95,6 +106,20 @@ namespace GroceryStoreApi.IntegrationTests
             actual.FirstName.Should().BeEquivalentTo(firstName);
             actual.LastName.Should().BeEquivalentTo(lastName);
             actual.Gender.Should().BeEquivalentTo(gender);
+
+        }
+
+        [Theory]
+        [InlineData(2, "Test", "Test", "")]
+        [InlineData(2, "", "Test", "Male")]
+        [InlineData(100, "Test", "Test", "Test")]
+        public async Task Test_UpdateCustomer_BadRequest(int id, string firstName, string lastName, string gender)
+        {
+            // Get customer by id
+            var customer = new Customer() { Id = id, FirstName = firstName, LastName = lastName, Gender = gender };
+            var response = await Client.PutAsync("/customer", new StringContent(JsonConvert.SerializeObject(customer), Encoding.UTF8, "application/json"));
+            response.StatusCode.Should().BeEquivalentTo(400);
+
 
         }
 
