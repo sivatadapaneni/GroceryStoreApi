@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroceryStoreApi", "GroceryStoreApi\GroceryStoreApi.csproj", "{9904D98B-A51F-49DF-9881-ED3FB00253E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroceryStoreApi.IntegrationTests", "GroceryStoreApiTests\GroceryStoreApi.IntegrationTests.csproj", "{50072234-F615-4578-95DD-A6D245978AC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroceryStoreApi.UnitTests", "GroceryStoreApi.UnitTests\GroceryStoreApi.UnitTests.csproj", "{F8FACBB8-699F-4ECE-982A-1DB935937A7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStoreApi.Model", "GroceryStoreApi.Model\GroceryStoreApi.Model.csproj", "{99B5A473-BFD0-485C-ABB5-1FA2FA580762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStoreApi.DataAccess", "GroceryStoreApi.DataAccess\GroceryStoreApi.DataAccess.csproj", "{95EEFF51-FE1C-41BF-8C6E-6EA5ED5F9948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryStoreApi.BusinessLayer", "GroceryStoreApi.BusinessLayer\GroceryStoreApi.BusinessLayer.csproj", "{AE348B72-66AC-451D-98EB-C6A60865C35A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9904D98B-A51F-49DF-9881-ED3FB00253E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9904D98B-A51F-49DF-9881-ED3FB00253E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9904D98B-A51F-49DF-9881-ED3FB00253E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9904D98B-A51F-49DF-9881-ED3FB00253E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50072234-F615-4578-95DD-A6D245978AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50072234-F615-4578-95DD-A6D245978AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50072234-F615-4578-95DD-A6D245978AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50072234-F615-4578-95DD-A6D245978AC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8FACBB8-699F-4ECE-982A-1DB935937A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8FACBB8-699F-4ECE-982A-1DB935937A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8FACBB8-699F-4ECE-982A-1DB935937A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8FACBB8-699F-4ECE-982A-1DB935937A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99B5A473-BFD0-485C-ABB5-1FA2FA580762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99B5A473-BFD0-485C-ABB5-1FA2FA580762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99B5A473-BFD0-485C-ABB5-1FA2FA580762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99B5A473-BFD0-485C-ABB5-1FA2FA580762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95EEFF51-FE1C-41BF-8C6E-6EA5ED5F9948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95EEFF51-FE1C-41BF-8C6E-6EA5ED5F9948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95EEFF51-FE1C-41BF-8C6E-6EA5ED5F9948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95EEFF51-FE1C-41BF-8C6E-6EA5ED5F9948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE348B72-66AC-451D-98EB-C6A60865C35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE348B72-66AC-451D-98EB-C6A60865C35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE348B72-66AC-451D-98EB-C6A60865C35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE348B72-66AC-451D-98EB-C6A60865C35A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBA61FE4-5823-4037-9B51-7DED7C1367AF}
+	EndGlobalSection
+EndGlobal
